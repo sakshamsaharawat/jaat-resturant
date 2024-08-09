@@ -1,0 +1,26 @@
+.navigation-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navigation-menu li {
+    margin: 0 20px
+}
+
+.navigation-menu li a {
+    color: #00cccc;
+    text-decoration: none;
+}
+
+.mobile-navigation-menu {
+    background-color: rgb(88, 108, 116);
+}
+
+
+.mobile-navigation-menu li a {
+    color: #00cccc;
+    text-decoration: none;
+}
