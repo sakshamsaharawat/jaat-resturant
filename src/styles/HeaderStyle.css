@@ -1,3 +1,11 @@
+.header {
+    margin: 0px;
+    padding: 0px;
+    height: 65px;
+
+
+}
+
 .navigation-menu {
     list-style: none;
     display: flex;
@@ -16,9 +24,13 @@
 }
 
 .mobile-navigation-menu {
-    background-color: rgb(88, 108, 116);
+    background-color: #586c74;
+    margin-top: 5px;
 }
 
+.mobile-navigation-menu li {
+    margin-top: 20px;
+}
 
 .mobile-navigation-menu li a {
     color: #00cccc;

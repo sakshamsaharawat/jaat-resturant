@@ -1,0 +1,32 @@
+.about-page {
+    text-align: center;
+    margin-right: 15px;
+    margin-left: 15px;
+
+}
+
+.about-page h4 {
+    font-style: bold;
+    font-size: 40px;
+    text-shadow: 3px 5px 5px #00cccc;
+}
+
+.about-page p {
+    margin-top: 20px;
+    text-align: justify;
+}
+
+@media screen and (max-width: 600px) {
+    .about-page {
+        margin-right: 8px;
+        margin-left: 8px;
+
+    }
+
+    .about-page h4 {
+        margin-top: 5px;
+        font-style: bold;
+        font-size: 20px;
+        text-shadow: 3px 5px 5px #00cccc;
+    }
+}

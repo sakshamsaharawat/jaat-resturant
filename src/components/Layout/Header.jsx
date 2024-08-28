@@ -5,22 +5,22 @@ import { Link } from 'react-router-dom';
 import "../../styles/HeaderStyle.css"
 import MenuIcon from '@mui/icons-material/Menu';
 
+
 const Header = () => {
     const [mobileOpen, setMobileOpen] = useState(false)
-
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen)
     }
 
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: ' center', border: " 2px solid red" }} >
-            <Typography color={'#00cccc'} variant='h5' component={'div'} sx={{ flexGrow: 1 }}>
+        <Box onClick={handleDrawerToggle} sx={{ textAlign: ' center', bgcolor: "#586c74", height: "100%" }} >
+            <Typography color={'#00cccc'} variant='h5' component={'div'} sx={{ flexGrow: 1, marginTop: "20px" }}>
                 <FastfoodIcon />
                 JAAT RESTURANT
             </Typography>
 
             <ul className='mobile-navigation-menu'>
-                <li><Link to={'/home'}>Home</Link></li>
+                <li><Link to={'/'}>Home </Link></li>
                 <li><Link to={'/menu'}>Menu</Link></li>
                 <li><Link to={'/about'}>About</Link></li>
                 <li><Link to={'/contact'}>Contact</Link></li>
@@ -31,7 +31,7 @@ const Header = () => {
     return (
         <>
             <Box>
-                <AppBar component={'nav'} sx={{ bgcolor: '#00111a' }}>
+                <AppBar className="header" component={'nav'} sx={{ bgcolor: '#00111a' }}>
                     <Toolbar>
                         <IconButton aria-label='open drawer' edge='start'
                             sx={{
@@ -48,7 +48,7 @@ const Header = () => {
                         </Typography>
                         <Box sx={{ display: { xs: 'none', sm: 'block' } }} >
                             <ul className='navigation-menu'>
-                                <li><Link to={'/home'}>Home</Link></li>
+                                <li><Link to={'/'}>Home</Link></li>
                                 <li><Link to={'/menu'}>Menu</Link></li>
                                 <li><Link to={'/about'}>About</Link></li>
                                 <li><Link to={'/contact'}>Contact</Link></li>
@@ -56,11 +56,12 @@ const Header = () => {
                         </Box>
                     </Toolbar>
                 </AppBar>
-                <Box style={{ border: "2px solid red" }} component='nav'>
+                <Box component='nav'>
                     <Drawer variant="temporary" open={mobileOpen} onClose={handleDrawerToggle} sx={{ display: { xs: "block", sm: "none" } }}>
                         {drawer}
                     </Drawer>
                 </Box>
+                <Toolbar />
             </Box>
 
         </>
